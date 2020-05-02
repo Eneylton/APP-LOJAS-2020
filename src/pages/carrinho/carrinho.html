@@ -1,0 +1,56 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Minhas Compras: <span style="color: rgb(224, 131, 217);"> {{cart.total | currency:'R$ '}}</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+  
+  <ion-content class="cards-bg">
+
+    <ion-card *ngFor="let produto of cart.items;let i = index">
+      <div class="feed_post_photo">
+
+        <img src="{{url+produto.foto}}"/>
+
+      </div>
+      
+  
+      <ion-card-content>
+        <ion-card-title>
+          {{produto.nome}}
+        </ion-card-title>
+        <p>
+          {{produto.descricao}}
+        </p>
+      </ion-card-content>
+  
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='star'></ion-icon>
+            {{produto.quantidade}}
+          </button>
+        </ion-col>
+        
+        <ion-col text-right>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='share-alt'></ion-icon>
+            {{produto.preco | currency:'R$ '}}
+          </button>
+        </ion-col>
+        
+        <ion-col>
+          <button ion-button clear small color="danger"
+           (click)="removeItem(index)"><ion-icon name="trash"></ion-icon><span style="margin-left: 10px;">Excluir</span> </button>
+        </ion-col>
+
+
+      </ion-row>
+  
+    </ion-card>
+  
+
+</ion-content>

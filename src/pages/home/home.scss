@@ -1,3 +1,19 @@
 page-home {
 
+    #cart-btn {
+        position: relative;
+     }
+     
+     #cart-badge {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+     }
+
+     .badge-md-danger {
+        color: #fff;
+        background-color: #be1d46;
+        border-radius: 10px;
+    }
+
 }

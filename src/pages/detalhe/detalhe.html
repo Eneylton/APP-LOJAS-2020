@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Detalhes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-card>
+    <img src="{{url+foto}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{nome}}
+        </ion-card-title>
+      <p>
+        {{descricao}}
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>
+          {{preco | currency:'R$ '}}
+        </button>
+      </ion-col>
+     
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          {{quantidade}}
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+ 
+ 
+</ion-content>

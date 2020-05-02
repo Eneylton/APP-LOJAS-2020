@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>produto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    
+   
+    <ion-item >
+      <img style="max-width: 70%; text-align:center;" src="../../assets/imgs/semi.png" *ngIf="base64Image == ''"   >
+      <img style="max-width: 70%; text-align:center;" src="{{base64Image}}" *ngIf="base64Image != ''"   >
+  
+    </ion-item>
+
+   
+
+  
+    <ion-item>
+      <ion-input type="text" placeholder="Nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Preco" [(ngModel)]="preco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Quantidade" [(ngModel)]="quantidade"></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-input type="text" rows={6} cols={20} placeholder="Informações do produto" [(ngModel)]="descricao"></ion-input>
+    </ion-item>
+    
+
+  </ion-list>
+
+  <div>
+    <button ion-button block (click)="presentActionSheet()" color="danger">Enviar Foto</button>
+  </div>
+
+  <button ion-button block (click)="add()">Cadastrar</button>
+
+
+
+</ion-content>
